@@ -1,62 +1,202 @@
 .edit {
+  padding-bottom: 174px;
 }
-.edit_profile {
-}
-.container {
-}
-.edit__form {
-}
+
 .edit__avatar {
   display: flex;
   align-items: center;
-
+  margin-bottom: 113px;
 }
+
 .edit__avatar-image {
+  /*также как в блоке profile*/
+  width: 100%;
+  max-width: 437px;
+  border-radius: 50%;
   margin-right: 106px;
 }
+
 .edit__avatar-load {
-  /* display: flex;
-  flex-direction: column; */
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
 .edit__label-avatar {
   display: flex;
   align-items: center;
   gap: 2px;
   font-size: 38px;
   margin-bottom: 11px;
+  cursor: pointer;
 }
+
 .edit__input-file {
-}
-.edit__input-file_avatar {
   display: none;
 }
+
 .edit__avatar-delete {
   display: flex;
   align-items: center;
   gap: 2px;
   font-size: 38px;
 }
+
 .edit__name {
+  margin-bottom: 44px;
   display: flex;
+  gap: 36px;
 }
+
 .edit__label {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  font-size: 50px;
+
+}
+
+.edit__label_name {
+  flex-basis: 686px;
 }
 .edit__label-text {
+  display: block;
   font-size: 50px;
+  margin-bottom: 14px;
 }
-.input {
-  flex-basis: 100px;
+
+.edit__input {
+  font-size: 48px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  color: #282828;
+  padding: 0 32px;
+  border: 0;
 }
+
 .edit__birthdate {
+  margin-bottom: 44px;
+  display: flex;
+  gap: 12px;
 }
+
+.edit__label_select {
+  position: relative;
+}
+
+.edit__label_select::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  background-image: url('../img/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /*позволяет прокликать сквозь элемент*/
+  pointer-events: none;
+}
+
+/*для разворота стрелки в селекте*/
+.edit__label_select:focus-within::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .edit__select {
+  /*сброс стилей с select (убираем стрелку)*/
+  appearance: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 48px;
+  background-color: #FFFFFF;
+  color: #282828;
+  padding: 22px 50px 22px 32px ;
+  outline: none;
 }
 .edit__description {
+  margin-bottom: 68px;
 }
+
+.edit__description-input {
+  max-width: 1420px;
+  width: 100%;
+  min-height: 250px;
+  font-size: 38px;
+  padding: 35px 32px;
+  /*запрещает менять размер*/
+  resize: none;
+  border: 3px solid #365ABA;
+  border-radius: 15px;
+}
+
 .edit__submit-btn {
+}
+
+.edit_wish {
+}
+
+.edit__wish {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px  36px;
+  max-width: 1423px;
+  margin-bottom: 44px;
+}
+
+.edit__wish-price {
+  display: flex;
+  gap: 36px;
+  align-items: flex-end;
+}
+
+.edit__label_price {
+  flex: 0 1 50%;
+}
+
+.edit__label-select {
+}
+
+.edit__select_currency {
+  width: 100%;
+}
+.edit__wish-photo {
+  position: relative;
+  width: 285px;
+  height: 285px;
+  margin-bottom: 152px;
+}
+.edit__label-photo {
+  display: inline-block;
+
+  cursor: pointer;
+}
+.edit__wish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.edit__wish-delete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.edit__submit-btn {
+  margin-right: 22px;
+}
+
+.edit__submit-btn:last-child {
+  margin-right: 0;
+}
+
+.btn {
+}
+.edit__delete-btn {
+
 }

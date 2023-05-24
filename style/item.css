@@ -3,24 +3,28 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 28px 0 43px;
-  background: #FFFFFF;
+  /*позволит при необходимости взять блок и растянуть его на всю высоту*/
+  min-height: 607px;
+  /*добавил отступ сверху/снизу 35px как защиту*/
+  padding: 28px 35px 43px;
+  background-color: #FFFFFF;
+  color: #282828;
   border-radius: 15px;
 }
 .item__img {
+  width: 300px;
+  height: 300px;
   margin-bottom: 36px;
 }
 .item__title {
   font-size: 28px;
-  color: #282828;
+  font-weight: 400;
   margin-bottom: 6px;
 }
 .item__price {
+  /*защита от переполнения - не будет прижиматься к кнопке*/
+  flex-grow: 1;
+  /*mb не по макету, т.к. есть flex-grow*/
+  margin-bottom: 20px;
   font-size: 28px;
-  color: #282828;
-  margin-bottom: 69px;
-}
-.item__btn {
-  background-color: #365ABA;
-  color: #FFFFFF;
 }

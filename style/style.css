@@ -92,3 +92,9 @@ fieldset {
   line-height: 40px;
   text-transform: capitalize;
 }
+
+.btn_castling {
+  background-color: #365ABA;
+  border-radius: 15px;
+  color: #FFFFFF;
+}

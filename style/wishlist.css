@@ -1,8 +1,5 @@
 .wishlist {
-  display: none;
-  padding-bottom: 50px;
-}
-.container {
+  padding-bottom: 174px;
 }
 
 .wishlist__profile {
@@ -15,18 +12,9 @@
   margin-bottom: 77px;
 }
 
-.wishlist__categories {
-}
-
-
 .whishlist__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: row;
   gap: 50px 40px;
-}
-
-.btn {
-}
-.btn_castling {
 }
