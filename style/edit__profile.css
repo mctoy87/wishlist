@@ -1,0 +1,62 @@
+.edit {
+}
+.edit_profile {
+}
+.container {
+}
+.edit__form {
+}
+.edit__avatar {
+  display: flex;
+  align-items: center;
+
+}
+.edit__avatar-image {
+  margin-right: 106px;
+}
+.edit__avatar-load {
+  /* display: flex;
+  flex-direction: column; */
+  
+}
+.edit__label-avatar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 38px;
+  margin-bottom: 11px;
+}
+.edit__input-file {
+}
+.edit__input-file_avatar {
+  display: none;
+}
+.edit__avatar-delete {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 38px;
+}
+.edit__name {
+  display: flex;
+}
+.edit__label {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+.edit__label-text {
+  font-size: 50px;
+}
+.input {
+  flex-basis: 100px;
+}
+.edit__birthdate {
+}
+.edit__select {
+}
+.edit__description {
+}
+.edit__submit-btn {
+}

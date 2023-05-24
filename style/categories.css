@@ -1,0 +1,17 @@
+.categories {
+
+}
+.categories__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories__item:not(:last-child) {
+  margin-bottom: 79px;
+}
+
+.categories__title {
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 38px;
+}

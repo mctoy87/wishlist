@@ -1,0 +1,27 @@
+.profile {
+  margin-bottom: 44px;
+}
+  
+.profile__avatar {
+  margin-right: 107px;
+}
+
+.profile__content {
+}
+
+.profile__fullname {
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.profile__birthday {
+  font-size: 38px;
+  margin-bottom: 44px;
+}
+
+.profile__edit {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}

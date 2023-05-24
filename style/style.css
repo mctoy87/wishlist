@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+}
+/*все элементы наследуют от root*/
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  /*устанавливаем минимальный размер экрана */
+  min-width: 320px;
+  /*сайт будет на всю высоту экрана*/
+  min-height: 100vh;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  background-color: #365ABA;
+  color: #FFFFFF;
+}
+
+img, svg {
+  /*уберет отступы внизу картинок*/
+  display: block;
+  /*чтобы не выпадали из блока*/
+  max-width: 100%;
+  max-height: 100%;
+  /*высота зависит от ширины*/
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol {
+  margin: 0;
+  /*для нашего проекта */
+  list-style: none;
+  padding: 0;
+}
+
+/*для нашего проекта */
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  max-width: 1792px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+/*в проекте растягиваем body и app(=main) на всю высоту*/
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app {
+  flex-grow: 1; /*расстягиваем main*/
+  display: flex;
+  flex-direction: column;
+}
+/*свои стили для кнопок*/
+.btn {
+  padding: 10px 20px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  color: #365ABA;
+  font-size: 34px;
+  line-height: 40px;
+  text-transform: capitalize;
+}

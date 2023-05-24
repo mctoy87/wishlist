@@ -1,0 +1,24 @@
+.steps {
+  display: flex;
+  gap: 44px;
+  justify-content: center;
+  /*объявим счетчик*/
+  counter-reset: steps-counter;
+}
+
+.steps__item {
+  display: flex;
+  align-items: center;
+  flex-basis: 243px;
+  font-size: 18px;
+}
+
+.steps__item:before {
+  /*указываем где будут счетчики*/
+  content: counter(steps-counter);
+  /*увеличивает счетчик на 1*/
+  counter-increment: steps-counter;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 92px;
+  margin-right: 16px;
+}
