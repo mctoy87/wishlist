@@ -10,6 +10,9 @@
 }
 
 .profile__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .profile__fullname {
@@ -28,4 +31,24 @@
   gap: 7px;
   align-items: center;
   font-size: 32px;
+}
+
+@media(max-width:1200px) {
+  .profile__avatar {
+    max-width: 466px;
+    margin-right: 34px;
+  }
+  
+  .profile__content {
+    padding-bottom: 145px;
+  }
+  
+  .profile__birthday {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  
+  .profile__edit {
+    gap: 2px;
+  }
 }

@@ -20,6 +20,7 @@
   font-size: 28px;
   font-weight: 400;
   margin-bottom: 6px;
+  text-align: center;
 }
 .item__price {
   /*защита от переполнения - не будет прижиматься к кнопке*/
@@ -28,3 +29,10 @@
   margin-bottom: 20px;
   font-size: 28px;
 }
+
+@media(max-width: 1200px) {
+  .item__img {
+    margin-bottom: 40px;
+  }
+}
+

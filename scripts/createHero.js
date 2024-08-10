@@ -36,7 +36,7 @@ export const createHero = () => {
     const step = createElement('li', {
       className: 'steps__item',
       //innerHtml вместо TextContent т.к. внутри текста есть спецсимволы
-      innerHTML: 'создайте список желаний'
+      innerHTML: text,
     });
 
     listSteps.append(step);

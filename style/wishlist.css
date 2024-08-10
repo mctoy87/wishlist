@@ -18,3 +18,24 @@
   grid-auto-flow: row;
   gap: 50px 40px;
 }
+
+
+@media(max-width: 1700px) {
+  .whishlist__items {
+    gap: 40px 30px;
+  }
+}
+
+
+@media(max-width: 1200px) {
+  .whishlist__items {
+    gap: 30px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 56px;
+  }
+
+  .wishlist__description {
+    font-size: 32px;
+    margin-bottom: 84px;
+  }
+}
