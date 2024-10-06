@@ -20,5 +20,29 @@
 
   .categories__title {
     margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media(max-width: 992px) {
+  .categories__item:not(:last-child) {
+    margin-bottom: 56px;
+  }
+
+  .categories__title {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+}
+
+
+@media(max-width: 740px) {
+  .categories__item:not(:last-child) {
+    margin-bottom: 42px;
+  }
+
+  .categories__title {
+    margin-bottom: 22px;
+    font-size: 32px;
   }
 }

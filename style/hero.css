@@ -56,3 +56,30 @@
     margin-bottom: 32px;
   }
 }
+
+@media (max-width: 992px) {
+  .hero__title {
+    font-size: 118px;
+  }
+
+  .hero__description {
+    font-size: 26px;
+    max-width: 590px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 740px) {
+  .hero__title {
+    font-size: 96px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero__description {
+    font-size: 18px;
+    margin-bottom: 54px;
+  }
+}

@@ -13,7 +13,6 @@
 }
 .item__img {
   width: 300px;
-  height: 300px;
   margin-bottom: 36px;
 }
 .item__title {
@@ -36,3 +35,34 @@
   }
 }
 
+@media(max-width: 992px) {
+  .item {
+    padding: 28px 30px 45px;
+  }
+
+  .item__img {
+    margin-bottom: 36px;
+  }
+}
+
+@media(max-width: 740px) {
+  .item {
+    padding: 22px 10px 20px;
+    min-height: 360px;
+  }
+
+  .item__img {
+    width: 170px;
+    margin-bottom: 22px;
+  }
+
+  .item__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .item__price {
+    font-size: 20px;
+    margin-bottom: 22px;
+  }
+}
