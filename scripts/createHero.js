@@ -14,7 +14,7 @@ export const createHero = () => {
   //4. создадим h1
   const title = createElement('h1', {
     className: 'hero__title',
-    textContent: 'WishList'
+    innerHTML: '<span>Wish</span><span>List</span>'
   });
   //4. создадим p
   const description = createElement('p', {
