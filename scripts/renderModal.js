@@ -1,4 +1,4 @@
-import { createElement } from "./helper.js";
+import { createElement, scrollController } from "./helper.js";
 
 export const renderModal = ({
   title,
@@ -65,12 +65,12 @@ export const renderModal = ({
     });
 
     const modalSubmitBtn = createElement('button', {
-      className: 'modal__btn btn',
+      className: 'modal__btn',
       textContent: btnSubmit,
     });
 
     const modalCloseBtn = createElement('button', {
-      className: 'modal__close btn',
+      className: 'modal__close',
       innerHTML: `
         <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.5676 20.1826C22.2477 19.8845 21.8246 19.7222 21.3874 19.73C20.9502 19.7377 20.5331 19.9148 20.224 20.224C19.9148 20.5331 19.7377 20.9502 19.73 21.3874C19.7222 21.8246 19.8845 22.2477 20.1826 22.5676L24.6151 27.0001L20.1826 31.4326C20.0168 31.5871 19.8838 31.7734 19.7916 31.9804C19.6994 32.1874 19.6498 32.4108 19.6458 32.6374C19.6418 32.864 19.6835 33.0891 19.7683 33.2992C19.8532 33.5093 19.9795 33.7002 20.1398 33.8604C20.3 34.0207 20.4909 34.147 20.701 34.2319C20.9111 34.3168 21.1362 34.3584 21.3628 34.3544C21.5894 34.3504 21.8128 34.3008 22.0198 34.2086C22.2268 34.1164 22.4131 33.9834 22.5676 33.8176L27.0001 29.3851L31.4326 33.8176C31.7525 34.1157 32.1756 34.278 32.6128 34.2702C33.05 34.2625 33.4671 34.0854 33.7763 33.7763C34.0854 33.4671 34.2625 33.05 34.2702 32.6128C34.278 32.1756 34.1157 31.7525 33.8176 31.4326L29.3851 27.0001L33.8176 22.5676C33.9834 22.4131 34.1164 22.2268 34.2086 22.0198C34.3008 21.8128 34.3504 21.5894 34.3544 21.3628C34.3584 21.1362 34.3168 20.9111 34.2319 20.701C34.147 20.4909 34.0207 20.3 33.8604 20.1398C33.7002 19.9795 33.5093 19.8532 33.2992 19.7683C33.0891 19.6835 32.864 19.6418 32.6374 19.6458C32.4108 19.6498 32.1874 19.6994 31.9804 19.7916C31.7734 19.8838 31.5871 20.0168 31.4326 20.1826L27.0001 24.6151L22.5676 20.1826Z" fill="#365ABA"/>
@@ -82,6 +82,7 @@ export const renderModal = ({
     modal.addEventListener('click', ({target}) => {
       if (target === modal || target.closest('.modal__close')) {
         modal.remove();
+        scrollController.enabledScroll();
       }
     })
 
@@ -93,6 +94,8 @@ export const renderModal = ({
     modalMain.append(modalTitle, modalDescription, modalForm, modalCloseBtn);
 
     modal.append(modalMain);
+
+    scrollController.disabledScroll();
 
     document.body.append(modal);
 };
