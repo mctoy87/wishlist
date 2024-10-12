@@ -26,7 +26,7 @@ const handleEditProfileRoute = (login) => {
 const handleUserRoute = async (login) => {
   app.textContent = '';
   renderNavigation();
-  app.append(await createWishlist(login));
+  // app.append(await createWishlist(login));
 };
 
 /*загрузка приложения*/
