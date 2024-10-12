@@ -2,7 +2,7 @@
 import { JWT_TOKEN_KEY } from "./const.js";
 import { createHero } from "./createHero.js";
 import { createWishlist } from "./createWishlist.js";
-import { getLogin } from "./getLogin.js";
+import { getLogin } from "./serviceAPI.js";
 
 // 4. импорт кнопок
 import { renderNavigation } from "./renderNavigation.js";
@@ -26,7 +26,7 @@ const handleEditProfileRoute = (login) => {
 const handleUserRoute = async (login) => {
   app.textContent = '';
   renderNavigation();
-  // app.append(await createWishlist(login));
+  app.append(await createWishlist(login));
 };
 
 /*загрузка приложения*/

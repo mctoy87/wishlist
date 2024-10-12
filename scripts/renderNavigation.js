@@ -16,6 +16,43 @@ export const renderNavigation = () => {
   // очищаем нав
   nav.textContent = '';
 
+  // определяем авторизованность пользователя
+  if (auth.login) {
+    // render smth else
+    // создаем кнопки через помощники (helper.js)
+    const butttonEditProfile = createElement('button', {
+      className: 'nav__btn btn',
+      textContent: 'Редактировать профиль'
+    });
+
+    butttonEditProfile.addEventListener('click', () => {
+      router.setRoute(`/editprofile/${auth.login}`);
+    });
+
+    const butttonAddWish = createElement('button', {
+      className: 'nav__btn btn',
+      textContent: 'Добавить желание'
+    });
+
+    butttonAddWish.addEventListener('click', () => {
+      router.setRoute('/editwish/newwish');
+    });
+
+    const butttonLogout = createElement('button', {
+      className: 'nav__btn btn',
+      textContent: 'Выйти'
+    });
+
+    butttonLogout.addEventListener('click', () => {
+      localStorage.removeItem(JWT_TOKEN_KEY)
+      auth.login = '';
+      router.setRoute('/');
+    });
+
+    nav.append(butttonEditProfile, butttonAddWish, butttonLogout);
+    return;
+  };
+
   // создаем кнопки через помощники (helper.js)
   const butttonSignUp = createElement('button', {
     className: 'nav__btn btn',
