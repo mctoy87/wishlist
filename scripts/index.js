@@ -6,6 +6,7 @@ import { getLogin } from "./serviceAPI.js";
 
 // 4. импорт кнопок
 import { renderNavigation } from "./renderNavigation.js";
+import { createEditProfile } from "./createEditProfile.js";
 
 // 7. Создаем с помощью библ director роутер, отвечающий за все действия
 export const router = Router();
@@ -19,8 +20,11 @@ const handleEditPageRoute = (id) => {
 
 };
 
-const handleEditProfileRoute = (login) => {
-
+const handleEditProfileRoute = async (login) => {
+  app.textContent = '';
+  const {sectionEditProfile, formProfile} = await createEditProfile(login)
+  renderNavigation('profile', formProfile);
+  app.append(sectionEditProfile);
 };
 
 const handleUserRoute = async (login) => {

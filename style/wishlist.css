@@ -20,6 +20,12 @@
   gap: 50px 40px;
 }
 
+.whishlist__no-wish {
+  font-size: 32px;
+  text-align: center;
+}
+.
+
 
 @media(max-width: 1700px) {
   .whishlist__items {

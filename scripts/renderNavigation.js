@@ -1,5 +1,5 @@
 // функция для рендера навигации
-import { createElement } from './helper.js';
+import { createElement, scrollController } from './helper.js';
 import { createBurgerMenu } from './createBurgerMenu.js';
 import { API_URL, JWT_TOKEN_KEY } from './const.js';
 import { renderModal } from './renderModal.js';
@@ -12,9 +12,39 @@ const nav = document.querySelector('.nav');
 // внутрь передаем nav для функционала открытия/закрытия
 createBurgerMenu(nav, 'nav_active', '.nav__btn');
 
-export const renderNavigation = () => {
+export const renderNavigation = (edit, formProfile) => {
   // очищаем нав
   nav.textContent = '';
+
+  // если передаем параметр edit в renderNavigation
+  if (edit) {
+    // создаем кнопки через помощники (helper.js)
+    const buttonSave = createElement('button', {
+      className: 'nav__btn btn',
+      textContent: 'Сохранить изменения'
+    });
+
+    buttonSave.addEventListener('click', (e)=> {
+      e.preventDefault();
+      /* с помощью dispatch на форме вызываем событие submit. А само событие submit 
+      смотри в createEditProfile => formProfile.addEventListener('submit', (e)...
+      bubles - это разрешить всплытие
+      */
+      formProfile.dispatchEvent(new Event('submit', {bubbles: true}));
+    });
+
+    const buttonBack = createElement('button', {
+      className: 'nav__btn btn',
+      textContent: 'Назад'
+    });
+
+    buttonBack.addEventListener('click', ()=> {
+      history.back();
+    });
+
+    nav.append(buttonSave, buttonBack);
+    return;
+  }
 
   // определяем авторизованность пользователя
   if (auth.login) {
@@ -27,6 +57,7 @@ export const renderNavigation = () => {
 
     butttonEditProfile.addEventListener('click', () => {
       router.setRoute(`/editprofile/${auth.login}`);
+      scrollController.enabledScroll();
     });
 
     const butttonAddWish = createElement('button', {
